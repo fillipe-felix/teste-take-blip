@@ -1,0 +1,13 @@
+package com.takeblip.testetakeblip;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class TesteTakeBlipApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(TesteTakeBlipApplication.class, args);
+    }
+
+}
