@@ -56,7 +56,7 @@ public class TakeBlipService {
         return  listTake.stream()
                 .sorted(Comparator.comparing(TakeBlip::getId))
                 .filter(c -> c.getLanguage() != null && c.getLanguage().equals("C#"))
-                .collect(Collectors.toList());
+                .collect(Collectors.toList()).subList(0, 5);
     }
 
     public List<TakeBlip> desseralizarObjeto(String json) throws JsonProcessingException {
