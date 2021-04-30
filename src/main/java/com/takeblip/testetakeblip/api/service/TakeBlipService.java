@@ -33,7 +33,6 @@ public class TakeBlipService {
 
     public List<TakeBlip> getRepositorios(String linguagem) {
         HttpRequest request = null;
-
         List<TakeBlip> listTake = new ArrayList<>();
         try {
             request = HttpRequest.newBuilder()
@@ -53,7 +52,7 @@ public class TakeBlipService {
 
         return  listTake.stream()
                 .sorted(Comparator.comparing(TakeBlip::getId))
-                .filter(c -> c.getLanguage() != null && c.getLanguage().equals(linguagem))
+                .filter(c -> c.getLanguage() != null && c.getLanguage().equals(linguagem.replace("C", "C#")))
                 .collect(Collectors.toList()).subList(0, 5);
     }
 
