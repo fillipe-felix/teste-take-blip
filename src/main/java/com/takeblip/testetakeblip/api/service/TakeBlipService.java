@@ -9,8 +9,7 @@ import com.takeblip.testetakeblip.api.repository.TakeBlipRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.util.UriBuilder;
-import org.springframework.web.util.UriBuilderFactory;
+
 
 import java.io.IOException;
 import java.net.URI;
@@ -19,7 +18,6 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,7 +31,7 @@ public class TakeBlipService {
 
     private static final String url = "https://api.github.com/orgs/takenet/repos?per_page=100&sort=created";
 
-    public List<TakeBlip> getRepositorios() {
+    public List<TakeBlip> getRepositorios(String linguagem) {
         HttpRequest request = null;
 
         List<TakeBlip> listTake = new ArrayList<>();
@@ -55,7 +53,7 @@ public class TakeBlipService {
 
         return  listTake.stream()
                 .sorted(Comparator.comparing(TakeBlip::getId))
-                .filter(c -> c.getLanguage() != null && c.getLanguage().equals("C#"))
+                .filter(c -> c.getLanguage() != null && c.getLanguage().equals(linguagem))
                 .collect(Collectors.toList()).subList(0, 5);
     }
 
