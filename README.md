@@ -7,7 +7,7 @@ Chat-bot criado para teste técnico da empresa Take Blip usando o aplicativo **B
 
 - Crie uma conta no [BliP](https://blip.ai)
 - Dentro da conta, crie um bot do zero e realize a importação do arquivo [chattakeblip.json](https://github.com/fillipe-felix/teste-take-blip/blob/master/chattakeblip.json)
-- Para se conectar a API será necessário executar o código em JAVA 11 deste repositório, para isso faça:
+- Para se conectar a API será necessário executar o código em JAVA 11 com Spring Boot deste repositório, para isso faça:
     - Realizar o git clone do repositório
 
   ```bash
@@ -21,4 +21,12 @@ Chat-bot criado para teste técnico da empresa Take Blip usando o aplicativo **B
 
 ## Utilizando o chat-bot
 
-- PS: Quando for utilizar o chat-bot utilizando a hospedagem do **Heroku** se não funcionar na primeira tentativa, tente novamente porque as vezes demora subir a instância da aplicação. 
+**PS: Quando for utilizar o chat-bot utilizando a hospedagem do **Heroku** se não funcionar na primeira tentativa, tente novamente porque as vezes demora subir a instância da aplicação.** 
+
+- No desenvolvimento do meu chat-bot e da API eu coloquei a opção do usuario escolher entre 4 linguagens de progração, sendo elas:
+    - C#
+    - Java
+    - JavaScript
+    - TypeScript 
+      
+- Assim ele traz os 5 repositórios mais antigos da Take Blip com base na linguagem selecionada.
